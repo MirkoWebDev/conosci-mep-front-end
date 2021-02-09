@@ -1,0 +1,27 @@
+.button{
+    padding: 1rem 2rem;
+    border: none;
+    background: #c14953;
+    margin: 1rem auto;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+
+    &:hover{
+        background: #cb676f;
+    }
+
+    &.user{
+        display: block;
+        background: #848fa5;
+        &:hover{
+            background: #a1a9ba;
+            color: #000;
+        }
+    }
+
+    &.magic{
+        background: #fcaa67;
+    }
+}

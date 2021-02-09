@@ -19,10 +19,22 @@ class MainController extends AbstractController
     }
 
     /**
+     * @Route("/user/{id}", name="user_page")
+     */
+    public function user($id): Response
+    {
+        return $this->render('main/user.html.twig', [
+            'user' => json_decode(file_get_contents(__DIR__ . '/../Resources/users.json', true))[$id -1 ],
+        ]);
+    }
+
+    /**
      * @Route("/posts", name="posts")
      */
     public function getPosts(): Response
     {
-        return $this->json(json_decode(file_get_contents(__DIR__ . '/../Resources/posts.json')));
+        return $this->render('main/posts.html.twig', [
+            'posts' => json_decode(file_get_contents(__DIR__ . '/../Resources/posts.json'))
+            ]);
     }
 }

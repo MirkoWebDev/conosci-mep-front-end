@@ -1,0 +1,9 @@
+.users-list{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 100rem;
+    padding: 0;
+    margin: 3rem auto;
+    list-style: none;
+}
