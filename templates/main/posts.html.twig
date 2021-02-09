@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Wonderful post page{% endblock %}
+
+{% block stylesheets %}
+{{ encore_entry_link_tags('main') }}
+{% endblock %}
+
+
+{% block body %}
+    <h1>Post Page</h1>
+
+    <a href="{{path('root')}}" class="button"> Go Back</a>
+
+
+    {% for post in posts %}
+        <div class="tile">
+            <h2>{{post.title}}</h2>
+            <p>{{post.body}}</p>
+        </div>
+    {% endfor %}
+{% endblock %}
